@@ -1,0 +1,86 @@
+[versions]
+agp = "8.10.1"
+kotlin = "2.1.20"
+ksp = "2.1.20-1.0.32"
+dokka = "2.0.0"
+mavenPublish = "0.31.0"
+
+# AndroidX
+coreKtx = "1.16.0"
+lifecycle = "2.9.0"
+room = "2.6.1"
+work = "2.10.1"
+
+# Compose
+composeBom = "2026.05.00"
+
+# Networking
+okhttp = "5.0.0"
+retrofit = "2.11.0"
+
+# Serialization
+kotlinxSerialization = "1.8.1"
+
+# Hilt
+hilt = "2.55"
+
+# Coroutines
+coroutines = "1.9.0"
+
+# Testing
+junit = "4.13.2"
+junitExt = "1.1.5"
+mockitoKotlin = "5.3.1"
+
+[libraries]
+# AndroidX
+androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
+androidx-lifecycle-runtime-ktx = { group = "androidx.lifecycle", name = "lifecycle-runtime-ktx", version.ref = "lifecycle" }
+androidx-room-runtime = { group = "androidx.room", name = "room-runtime", version.ref = "room" }
+androidx-room-compiler = { group = "androidx.room", name = "room-compiler", version.ref = "room" }
+androidx-room-ktx = { group = "androidx.room", name = "room-ktx", version.ref = "room" }
+androidx-work-runtime = { group = "androidx.work", name = "work-runtime-ktx", version.ref = "work" }
+
+# Compose
+compose-bom = { group = "androidx.compose", name = "compose-bom", version.ref = "composeBom" }
+compose-ui = { group = "androidx.compose.ui", name = "ui" }
+compose-ui-tooling = { group = "androidx.compose.ui", name = "ui-tooling" }
+compose-ui-tooling-preview = { group = "androidx.compose.ui", name = "ui-tooling-preview" }
+compose-material3 = { group = "androidx.compose.material3", name = "material3" }
+compose-foundation = { group = "androidx.compose.foundation", name = "foundation" }
+compose-activity = { group = "androidx.activity", name = "activity-compose", version = "1.10.1" }
+compose-viewmodel = { group = "androidx.lifecycle", name = "lifecycle-viewmodel-compose", version.ref = "lifecycle" }
+compose-ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit4" }
+
+# Networking (compileOnly in library)
+okhttp-logging = { group = "com.squareup.okhttp3", name = "logging-interceptor", version.ref = "okhttp" }
+retrofit-core = { group = "com.squareup.retrofit2", name = "retrofit", version.ref = "retrofit" }
+
+# Serialization
+kotlinx-serialization-json = { group = "org.jetbrains.kotlinx", name = "kotlinx-serialization-json", version.ref = "kotlinxSerialization" }
+
+# Hilt (compileOnly in library)
+hilt-android = { group = "com.google.dagger", name = "hilt-android", version.ref = "hilt" }
+hilt-compiler = { group = "com.google.dagger", name = "hilt-android-compiler", version.ref = "hilt" }
+hilt-navigation-compose = { group = "androidx.hilt", name = "hilt-navigation-compose", version = "1.2.0" }
+
+# Coroutines
+kotlinx-coroutines-core = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-core", version.ref = "coroutines" }
+kotlinx-coroutines-android = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-android", version.ref = "coroutines" }
+
+# Testing
+junit = { group = "junit", name = "junit", version.ref = "junit" }
+androidx-test-ext = { group = "androidx.test.ext", name = "junit", version.ref = "junitExt" }
+kotlinx-coroutines-test = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-test", version.ref = "coroutines" }
+mockito-kotlin = { group = "org.mockito.kotlin", name = "mockito-kotlin", version.ref = "mockitoKotlin" }
+
+[plugins]
+android-library = { id = "com.android.library", version.ref = "agp" }
+android-application = { id = "com.android.application", version.ref = "agp" }
+kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
+kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
+ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
+dokka = { id = "org.jetbrains.dokka", version.ref = "dokka" }
+maven-publish = { id = "com.vanniktech.maven.publish", version.ref = "mavenPublish" }
+hilt = { id = "com.google.dagger.hilt.android", version.ref = "hilt" }

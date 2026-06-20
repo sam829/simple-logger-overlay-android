@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Required for shake-to-open (accelerometer) -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <application>
+        <activity
+            android:name=".ui.activity.LoggerOverlayActivity"
+            android:theme="@android:style/Theme.Material.Light.NoActionBar"
+            android:exported="false"
+            android:launchMode="singleTop" />
+
+        <!--
+            FileProvider with a fixed library authority so it never conflicts with
+            the host app's own FileProvider declaration.
+        -->
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="in.sammacwan.logger.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/logger_file_provider_paths" />
+        </provider>
+    </application>
+
+</manifest>

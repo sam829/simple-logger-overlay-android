@@ -1,0 +1,27 @@
+# Binaries
+*.apk
+*.aab
+*.dex
+*.class
+
+# Build outputs
+build/
+.gradle/
+.idea/
+*.iml
+local.properties
+
+# Keystore
+*.jks
+*.keystore
+
+# macOS
+.DS_Store
+
+# Gradle
+.gradle/
+gradle-app.setting
+!gradle-wrapper.jar
+
+# Kotlin
+*.kt.bak
