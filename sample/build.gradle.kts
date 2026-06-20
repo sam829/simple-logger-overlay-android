@@ -7,11 +7,11 @@ plugins {
 }
 
 android {
-    namespace = "in.sammacwan.logger.sample"
+    namespace = "com.debugtools.logger.sample"
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "in.sammacwan.logger.sample"
+        applicationId = "com.debugtools.logger.sample"
         minSdk = 24
         targetSdk = 35
         versionCode = 1

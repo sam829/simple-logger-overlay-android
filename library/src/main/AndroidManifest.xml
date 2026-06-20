@@ -17,7 +17,7 @@
         -->
         <provider
             android:name="androidx.core.content.FileProvider"
-            android:authorities="in.sammacwan.logger.provider"
+            android:authorities="com.debugtools.logger.provider"
             android:exported="false"
             android:grantUriPermissions="true">
             <meta-data
