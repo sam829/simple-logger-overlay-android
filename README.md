@@ -211,6 +211,68 @@ WorkManagerObserver.init(context) // monitors all queued work automatically
 
 ---
 
+## 🎨 Customisation
+
+### Theme colour
+
+The overlay generates a full Material 3 colour scheme from a single `seedColor`. Pass any `androidx.compose.ui.graphics.Color` to match your app's brand:
+
+```kotlin
+LoggerOverlay.init(
+    context = this,
+    config = LoggerConfig(
+        seedColor = Color(0xFF00897B),  // teal brand colour
+    )
+)
+```
+
+The overlay automatically adapts to **light and dark mode** based on the system theme — no extra configuration needed.
+
+### Log retention
+
+By default logs are kept **in memory only** and cleared when the process dies. Enable Room persistence to retain logs across launches:
+
+```kotlin
+LoggerConfig(
+    persistLogs = true,
+    retentionDays = 3,  // auto-purge entries older than 3 days
+)
+```
+
+Set `retentionDays = 0` to clear all persisted logs on every app launch (useful for keeping storage clean during heavy testing).
+
+### Shake-to-open
+
+Shake-to-open is enabled by default so you can trigger the overlay on physical devices without a visible FAB. Disable it if the accelerometer sensitivity causes false triggers:
+
+```kotlin
+LoggerConfig(
+    enableShakeToOpen = false,
+)
+```
+
+### Logcat mirroring
+
+By default every log entry is also forwarded to Android Logcat. Set `logToConsole = false` if you want the overlay to be the sole output:
+
+```kotlin
+LoggerConfig(
+    logToConsole = false,
+)
+```
+
+### Max in-memory entries
+
+Prevent unbounded memory growth during long debug sessions by capping the in-memory log buffer:
+
+```kotlin
+LoggerConfig(
+    maxLogsInMemory = 500,  // oldest entries are evicted when the limit is hit
+)
+```
+
+---
+
 ## 📤 Export logs
 
 ```kotlin
