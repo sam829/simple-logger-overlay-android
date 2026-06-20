@@ -26,6 +26,34 @@
 
 ---
 
+## 📑 Table of Contents
+
+- [✨ Features](#-features)
+- [📸 Screenshots](#-screenshots)
+- [🚀 Installation](#-installation)
+- [⚙️ Initialisation](#️-initialisation)
+- [📖 Logging](#-logging)
+- [🌐 Network Logging](#-network-logging)
+- [🕹️ SessionTelemetry](#️-sessiontelemetry)
+- [🔌 Optional Integrations](#-optional-integrations)
+  - [Hilt injection observer](#hilt-injection-observer)
+  - [WorkManager observer](#workmanager-observer)
+- [⚙️ Configuration reference](#️-configuration-reference)
+- [🎨 Customisation](#-customisation)
+  - [Theme colour](#theme-colour)
+  - [Log retention](#log-retention)
+  - [Shake-to-open](#shake-to-open)
+  - [Logcat mirroring](#logcat-mirroring)
+  - [Max in-memory entries](#max-in-memory-entries)
+- [📤 Export logs](#-export-logs)
+- [🔒 Production safety](#-production-safety)
+- [📋 Requirements](#-requirements)
+- [📚 API Reference](#-api-reference)
+- [🏗️ Architecture](#️-architecture)
+- [📄 License](#-license)
+
+---
+
 ## ✨ Features
 
 - **📱 In-App Debug Overlay** — view logs without connecting to Logcat
