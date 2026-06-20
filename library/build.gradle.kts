@@ -1,4 +1,5 @@
 import com.vanniktech.maven.publish.SonatypeHost
+import java.net.URL
 
 plugins {
     alias(libs.plugins.android.library)
@@ -11,7 +12,7 @@ plugins {
 }
 
 android {
-    namespace = "in.sammacwan.logger"
+    namespace = "com.debugtools.logger"
     compileSdk = 35
 
     defaultConfig {
@@ -94,15 +95,17 @@ mavenPublishing {
     }
 }
 
-dokka {
-    moduleName.set("Simple Logger Overlay")
+tasks.withType<org.jetbrains.dokka.gradle.DokkaTask>().configureEach {
     dokkaSourceSets {
         named("main") {
+            moduleName.set("Simple Logger Overlay")
             reportUndocumented.set(true)
             sourceLink {
                 localDirectory.set(file("src/main/kotlin"))
                 remoteUrl.set(
-                    uri("https://github.com/sam829/simple-logger-overlay-android/tree/main/library/src/main/kotlin")
+                    URL(
+                        "https://github.com/sam829/simple-logger-overlay-android/tree/main/library/src/main/kotlin"
+                    )
                 )
                 remoteLineSuffix.set("#L")
             }

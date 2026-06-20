@@ -3,9 +3,9 @@
 # Android SDK tools proguard-rules.pro file.
 
 # Keep public library API
--keep public class in.sammacwan.logger.LoggerOverlay { *; }
--keep public class in.sammacwan.logger.config.** { *; }
--keep public class in.sammacwan.logger.core.** { *; }
--keep public class in.sammacwan.logger.network.** { *; }
--keep public class in.sammacwan.logger.telemetry.** { *; }
--keep public class in.sammacwan.logger.framework.** { *; }
+-keep public class com.debugtools.logger.LoggerOverlay { *; }
+-keep public class com.debugtools.logger.config.** { *; }
+-keep public class com.debugtools.logger.core.** { *; }
+-keep public class com.debugtools.logger.network.** { *; }
+-keep public class com.debugtools.logger.telemetry.** { *; }
+-keep public class com.debugtools.logger.framework.** { *; }

@@ -47,8 +47,8 @@ Replace `LATEST_VERSION` with the badge version above, or check [Maven Central](
 Call `LoggerOverlay.init()` once in your `Application.onCreate()`:
 
 ```kotlin
-import in.sammacwan.logger.LoggerOverlay
-import in.sammacwan.logger.config.LoggerConfig
+import com.debugtools.logger.LoggerOverlay
+import com.debugtools.logger.config.LoggerConfig
 
 class MyApp : Application() {
     override fun onCreate() {
@@ -73,7 +73,7 @@ class MyApp : Application() {
 ## 📖 Logging
 
 ```kotlin
-import in.sammacwan.logger.LoggerOverlay
+import com.debugtools.logger.LoggerOverlay
 
 LoggerOverlay.v("MyTag", "Verbose message")
 LoggerOverlay.d("MyTag", "Debug message", mapOf("key" to "value"))
@@ -95,7 +95,7 @@ LoggerOverlay.telemetry("Checkout", "payment_submitted", mapOf("amount" to "9.99
 Add `OkHttpLoggerInterceptor` to your `OkHttpClient`:
 
 ```kotlin
-import in.sammacwan.logger.network.OkHttpLoggerInterceptor
+import com.debugtools.logger.network.OkHttpLoggerInterceptor
 
 val client = OkHttpClient.Builder()
     .addInterceptor(OkHttpLoggerInterceptor())
@@ -113,7 +113,7 @@ Network logs appear in the **Network** tab with full request/response details.
 Track timed flows across your app:
 
 ```kotlin
-import in.sammacwan.logger.telemetry.SessionTelemetry
+import com.debugtools.logger.telemetry.SessionTelemetry
 
 // Start a flow
 SessionTelemetry.startSession("checkout-42", "CheckoutFlow")
@@ -133,7 +133,7 @@ SessionTelemetry.endSession("checkout-42", success = true)
 ### Hilt injection observer
 
 ```kotlin
-import in.sammacwan.logger.framework.HiltInjectionObserver
+import com.debugtools.logger.framework.HiltInjectionObserver
 
 @HiltAndroidApp
 class MyApp : Application() {
@@ -155,7 +155,7 @@ HiltInjectionObserver.logInjection(
 ### WorkManager observer
 
 ```kotlin
-import in.sammacwan.logger.framework.WorkManagerObserver
+import com.debugtools.logger.framework.WorkManagerObserver
 
 WorkManagerObserver.init(context) // monitors all queued work automatically
 ```
