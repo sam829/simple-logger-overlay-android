@@ -25,3 +25,6 @@ gradle-app.setting
 
 # Kotlin
 *.kt.bak
+
+# Private local documentation — never commit
+docs/gpg-key-setup.md

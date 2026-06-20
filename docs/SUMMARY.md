@@ -20,7 +20,3 @@
 * [Network Logging](guides/network-logging.md)
 * [Export Logs](guides/export-logs.md)
 * [Production Safety](guides/production-safety.md)
-
-## Reference
-
-* [GPG Key Setup](gpg-key-setup.md)
