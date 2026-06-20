@@ -108,7 +108,7 @@ fun SampleScreen() {
 
             Button(onClick = {
                 // Fire a real HTTP request through the instrumented OkHttpClient
-                scope.launch {
+                scope.launch(kotlinx.coroutines.Dispatchers.IO) {
                     val app = context.applicationContext as SampleApp
                     try {
                         val request = okhttp3.Request.Builder()

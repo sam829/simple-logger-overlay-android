@@ -1,4 +1,12 @@
+<div align="center">
+
+<img src="https://github.com/sam829/simple-logger-overlay-android/blob/main/screenshot/logo.svg?raw=true" width="120" alt="Simple Logger Overlay"/>
+
 # Simple Logger Overlay — Android
+
+**A production-ready in-app debug overlay for Android — Compose, Material 3, zero config.**
+
+### Made with Love & Caffeine by [Sam ♥](https://info.sammacwan.in)
 
 [![CI](https://github.com/sam829/simple-logger-overlay-android/actions/workflows/ci.yml/badge.svg)](https://github.com/sam829/simple-logger-overlay-android/actions/workflows/ci.yml)
 [![Maven Central](https://img.shields.io/maven-central/v/in.sammacwan/simple-logger-overlay)](https://central.sonatype.com/artifact/in.sammacwan/simple-logger-overlay)
@@ -6,7 +14,15 @@
 [![License](https://img.shields.io/badge/license-Apache%202.0-blue)](LICENSE)
 [![API Docs](https://img.shields.io/badge/docs-KDoc-orange)](https://sam829.github.io/simple-logger-overlay-android/)
 
-A production-ready Android logging library with an in-app debug overlay for viewing logs, network requests, and more. Built with **Jetpack Compose** and **Material 3**.
+<br/>
+
+*Stop switching to Logcat mid-demo.*
+*Logs, network calls, and filters — right inside your app.*
+*One dependency. Zero overhead in production.*
+
+</div>
+
+<img src="https://github.com/sam829/simple-logger-overlay-android/blob/main/screenshot/logging-banner.png?raw=true" width="100%" alt="Simple Logger Overlay Banner"/>
 
 ---
 
@@ -24,6 +40,23 @@ A production-ready Android logging library with an in-app debug overlay for view
 - **📊 JSON Pretty-Printing** — human-readable JSON in log details
 - **📳 Shake-to-Open** — open the overlay by shaking the device
 - **🕹️ SessionTelemetry** — track timed user flows and milestones
+
+---
+
+## 📸 Screenshots
+
+<table>
+  <tr>
+    <td align="center"><img src="https://github.com/sam829/simple-logger-overlay-android/blob/main/screenshot/1_log_list.png?raw=true" width="200"/><br/><sub><b>Log List</b></sub></td>
+    <td align="center"><img src="https://github.com/sam829/simple-logger-overlay-android/blob/main/screenshot/2_log_detail.png?raw=true" width="200"/><br/><sub><b>Log Detail</b></sub></td>
+    <td align="center"><img src="https://github.com/sam829/simple-logger-overlay-android/blob/main/screenshot/3_network_list.png?raw=true" width="200"/><br/><sub><b>Network Logs</b></sub></td>
+  </tr>
+  <tr>
+    <td align="center"><img src="https://github.com/sam829/simple-logger-overlay-android/blob/main/screenshot/4_network_detail.png?raw=true" width="200"/><br/><sub><b>Network Detail</b></sub></td>
+    <td align="center"><img src="https://github.com/sam829/simple-logger-overlay-android/blob/main/screenshot/5b_search_results.png?raw=true" width="200"/><br/><sub><b>Search</b></sub></td>
+    <td align="center"><img src="https://github.com/sam829/simple-logger-overlay-android/blob/main/screenshot/6_filter.png?raw=true" width="200"/><br/><sub><b>Filter by Level</b></sub></td>
+  </tr>
+</table>
 
 ---
 
